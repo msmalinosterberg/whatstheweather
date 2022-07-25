@@ -1,3 +1,5 @@
+# the weather part was from a tutorial from Code Commerce "Build A React JS Weather App - OpenWeatherMap API - Tutorial" on youtube.
+ 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
