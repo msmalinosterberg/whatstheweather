@@ -33,14 +33,10 @@ function Pollution() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p> {data.coord.lat}</p>
+            {data.coord !== undefined && <p> {data.coord.lat}</p>}
           </div>
-          <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
-          </div>
-          <div className="description">
-            {data.weather ? <p>{data.weather[0].main}</p> : null}
-          </div>
+          <div className="temp"></div>
+          <div className="description"></div>
         </div>
         <button className="gobackbtn" onClick={() => navigate(-1)}>
           Go back
