@@ -11,7 +11,9 @@ export default function Home() {
           <Button className="homeButton" type="text">
             <Link to={"/weather"}>Weather</Link>
           </Button>
-          <button className="homeButton">Pollution</button>
+          <Button className="homeButton" type="text">
+            <Link to={"/pollution"}>Pollution</Link>
+          </Button>
         </div>
       </div>
     </div>
