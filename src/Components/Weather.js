@@ -62,6 +62,16 @@ function Weather() {
               ) : null}
               <p>Wind Speed</p>
             </div>
+            <div className="icon">
+              {/* {data.weather ? (
+                <p className="bold">{data.weather[0].icon} </p>
+              ) : null} */}
+              <img
+                src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}
+                alt="weather status icon"
+                className="weather-icon"
+              />
+            </div>
           </div>
         )}
         {data.name !== undefined && (
