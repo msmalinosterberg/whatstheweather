@@ -66,9 +66,17 @@ function Weather() {
         )}
         {data.name !== undefined && (
           <div class="historyOfCity">
-            <div className="feels">
+            <div className="country">
               {data.sys ? <p className="bold">{data.sys.country}</p> : null}
-              <p>country</p>
+              <p>Country</p>
+            </div>
+            <div className="latitude">
+              {data.coord ? <p className="bold">{data.coord.lat}</p> : null}
+              <p>Latitude</p>
+            </div>
+            <div className="longitude">
+              {data.coord ? <p className="bold">{data.coord.lon}</p> : null}
+              <p>Longitude</p>
             </div>
           </div>
         )}
