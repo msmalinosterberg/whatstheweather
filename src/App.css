@@ -125,7 +125,7 @@ h1 {
   display: flex;
   margin: auto;
   position: relative;
-  top: 10%;
+  top: 20%;
 }
 
 .pollution {
@@ -182,6 +182,16 @@ a:visited {
 }
 
 .pollution .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.historyOfCity {
   display: flex;
   justify-content: space-evenly;
   text-align: center;

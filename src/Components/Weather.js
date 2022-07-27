@@ -64,6 +64,14 @@ function Weather() {
             </div>
           </div>
         )}
+        {data.name !== undefined && (
+          <div class="historyOfCity">
+            <div className="feels">
+              {data.sys ? <p className="bold">{data.sys.country}</p> : null}
+              <p>country</p>
+            </div>
+          </div>
+        )}
       </div>
       <button className="gobackbtn" onClick={() => navigate(-1)}>
         Go back
