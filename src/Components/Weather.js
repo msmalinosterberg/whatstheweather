@@ -17,6 +17,15 @@ function Weather() {
         console.log(response.data);
       });
       setLocation("");
+      checkTemps();
+    }
+  };
+
+  const checkTemps = () => {
+    if (data.main.temp.toFixed() > 20) {
+      console.log("över 20");
+    } else {
+      console.log("under 20");
     }
   };
 
@@ -37,8 +46,9 @@ function Weather() {
             <p>{data.name}</p>
           </div>
           <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
+            {data.main ? <h1>{data.main.temp.toFixed(checkTemps)}°C</h1> : null}
           </div>
+
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
@@ -63,9 +73,6 @@ function Weather() {
               <p>Wind Speed</p>
             </div>
             <div className="icon">
-              {/* {data.weather ? (
-                <p className="bold">{data.weather[0].icon} </p>
-              ) : null} */}
               <img
                 src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}
                 alt="weather status icon"

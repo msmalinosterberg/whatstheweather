@@ -9,10 +9,10 @@ export default function Home() {
         <h1> What's the weather like? </h1>
         <div>
           <Button className="homeButton" type="text">
-            <Link to={"/weather"}>Weather</Link>
+            <Link to={"/weather"}>Right now</Link>
           </Button>
           <Button className="homeButton" type="text">
-            <Link to={"/pollution"}>Pollution</Link>
+            <Link to={"/pollution"}> In two weeks</Link>
           </Button>
         </div>
       </div>
