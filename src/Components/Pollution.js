@@ -8,7 +8,7 @@ function Pollution() {
 
   const navigate = useNavigate();
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&cnt=14&units=metric&appid=183d218b925add2d7a08f0db03161a01`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&cnt=5&units=metric&appid=183d218b925add2d7a08f0db03161a01`;
 
   const searchLocation = (event) => {
     if (event.key === "Enter") {
@@ -33,15 +33,13 @@ function Pollution() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>{data.name}</p>
+            <p>{data.city.name}</p>
           </div>
           <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
+            {data.cnt ? <h1>{data.cnt}days</h1> : null}
           </div>
 
-          <div className="description">
-            {data.weather ? <p>{data.weather[0].main}</p> : null}
-          </div>
+          <div className="description">{data.weather ? <p>{}</p> : null}</div>
         </div>
 
         {data.name !== undefined && (
