@@ -46,22 +46,13 @@ function Pollution() {
 
         {data.name !== undefined && (
           <div className="bottom">
-            <div className="temp">
-              <p>14days forcast</p>
-              <p className="bold">{data.weather.list}°C</p>
-              {/* {data.sys ? <p className="bold">{data.sys.list.temp}°C</p> : null} */}
-            </div>
             <div className="Sunrise">
-              <p>
-                Sunrise:{" "}
-                {new Date(data.sys.sunrise * 1000).toLocaleTimeString("en-IN")}
-              </p>
+              <p>Sunrise: </p>
+              {new Date(data.sys.sunrise * 1000).toLocaleTimeString("en-IN")}
             </div>
             <div className="Sunset">
-              <p>
-                Sunset:{" "}
-                {new Date(data.sys.sunset * 1000).toLocaleTimeString("en-IN")}
-              </p>
+              <p>Sunset: </p>
+              {new Date(data.sys.sunset * 1000).toLocaleTimeString("en-IN")}
             </div>
 
             <div className="temp">
