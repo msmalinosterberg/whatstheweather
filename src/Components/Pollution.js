@@ -4,11 +4,11 @@ import axios from "axios";
 
 function Pollution() {
   const [data, setData] = useState({});
-  const [location, setNewLocation] = useState("");
+  const [forecast, setForecast] = useState("");
 
   const navigate = useNavigate();
 
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&cnt=5&units=metric&appid=183d218b925add2d7a08f0db03161a01`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${forecast}&cnt=5&units=metric&appid=183d218b925add2d7a08f0db03161a01`;
 
   const searchLocation = (event) => {
     if (event.key === "Enter") {
@@ -16,15 +16,15 @@ function Pollution() {
         setData(response.data);
         console.log(response.data);
       });
-      setNewLocation("");
+      setForecast("");
     }
   };
   return (
     <div className="weather">
       <div className="search">
         <input
-          value={location}
-          onChange={(event) => setNewLocation(event.target.value)}
+          value={forecast}
+          onChange={(event) => setForecast(event.target.value)}
           onKeyPress={searchLocation}
           placeholder="Enter Location"
           type="text"
@@ -33,13 +33,16 @@ function Pollution() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>{data.city.name}</p>
+            <p>{data.name}</p>
           </div>
           <div className="temp">
-            {data.cnt ? <h1>{data.cnt}days</h1> : null}
+            {data.sys ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
 
-          <div className="description">{data.weather ? <p>{}</p> : null}</div>
+          <div className="description">
+            {" "}
+            {data.weather ? <p>{data.list[0].main}</p> : null}
+          </div>
         </div>
 
         {data.name !== undefined && (

@@ -9,11 +9,13 @@ export default function Home() {
         <h1> What's the weather like? </h1>
         <div>
           <Button className="homeButton" type="text">
-            <Link to={"/weather"}>Right now</Link>
+            <Link to={"/weather"} style={{ color: "black" }}>
+              Right now
+            </Link>
           </Button>
-          <Button className="homeButton" type="text">
+          {/* <Button className="homeButton" type="text">
             <Link to={"/pollution"}> In two weeks</Link>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>
