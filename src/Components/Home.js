@@ -1,4 +1,3 @@
-import Weather from "./Weather";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 
